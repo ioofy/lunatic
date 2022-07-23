@@ -7,6 +7,7 @@
 - 🪢 [CSS Modules](https://github.com/css-modules/css-modules)
 - 👑 [Atomic Design organization](https://bradfrost.com/blog/post/atomic-web-design/)
 - 🗂 [Absolute imports](https://github.com/vitejs/vite/issues/88#issuecomment-762415200)
+- 🐶 [Husky] - Improve code quality with linting and code formatting
 - ☁️ Deploy on Vercel, zero-config
 
 ### Coding Style
