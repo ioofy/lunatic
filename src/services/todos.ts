@@ -1,10 +1,10 @@
 import apiClient from "libs/apiClient";
-import { TodosType } from "types/data";
+import { Todos } from "types/data";
 
 const getTodosData = async (no: number) => {
-  const response = await apiClient.get(`/todos/${no}`);
+  const response = await apiClient.get<Todos>(`/todos/${no}`);
 
-  return TodosType.parse(response.data);
+  return response.data;
 };
 
 const todosService = { getTodosData };

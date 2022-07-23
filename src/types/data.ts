@@ -9,9 +9,13 @@ export const UsersType = z.object({
   website: z.string(),
 });
 
+export type Users = z.infer<typeof UsersType>;
+
 export const TodosType = z.object({
   id: z.number(),
   title: z.string(),
   completed: z.boolean(),
   userId: z.number(),
 });
+
+export type Todos = z.infer<typeof TodosType>;

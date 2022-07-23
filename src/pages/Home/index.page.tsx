@@ -1,21 +1,27 @@
 import Generic from "components/Generic";
-import KeyType from "components/KeyType";
 import { useFetchTodos, useFetchUsers } from "hooks/useFetch";
 
 export const Home = () => {
-  const { data: todos, isLoading: todosLoading } = useFetchTodos();
-  const { data: users, isLoading: usersLoading } = useFetchUsers();
+  const {
+    data: todos,
+    isLoading: todosLoading,
+    isSuccess: todosSuccess,
+    isError: todosError,
+  } = useFetchTodos();
+  const {
+    data: users,
+    isLoading: usersLoading,
+    isSuccess: usersSuccess,
+    isError: usersError,
+  } = useFetchUsers();
 
-  if (todosLoading || usersLoading) return <p>Fetching your data..</p>;
+  if (usersLoading || todosLoading) return <p>Fetching your data..</p>;
+  if (usersError || todosError) return <p>Error fetching your data..</p>;
 
   return (
     <div>
-      With Generic Type
-      <Generic todos={todos} users={users} />
-      <br />
-      <br />
-      With key Type
-      <KeyType {...todos} />
+      Query Data
+      {usersSuccess && todosSuccess && <Generic users={users} todos={todos} />}
     </div>
   );
 };

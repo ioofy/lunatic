@@ -1,13 +1,9 @@
 import React from "react";
-import { TodosType, UsersType } from "types/data";
-import { z } from "zod";
-
-type Users = z.infer<typeof UsersType>;
-type Todos = z.infer<typeof TodosType>;
+import { Todos, Users } from "types/data";
 
 interface ItemProps {
-  todos: Todos | undefined;
-  users: Users | undefined;
+  todos?: Todos | undefined;
+  users?: Users | undefined;
 }
 
 const Generic: React.FC<ItemProps> = ({ todos, users }) => {
