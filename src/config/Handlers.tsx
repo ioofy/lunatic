@@ -1,7 +1,8 @@
 import { render } from "@testing-library/react";
 import { rest } from "msw";
-import { QueryClient, QueryClientProvider } from "react-query";
+import { QueryClientProvider } from "react-query";
 import React from "react";
+import queryClient from "libs/queryClient";
 
 export const handlers = [
   rest.get("*/users/*", (req, res, ctx) => {
@@ -23,18 +24,8 @@ export const handlers = [
   }),
 ];
 
-const createTestQueryClient = () =>
-  new QueryClient({
-    defaultOptions: {
-      queries: {
-        refetchOnWindowFocus: false,
-        retry: false,
-      },
-    },
-  });
-
 export const renderWithClient = (ui: React.ReactElement) => {
-  const testQueryClient = createTestQueryClient();
+  const testQueryClient = queryClient();
   const { rerender, ...result } = render(
     <QueryClientProvider client={testQueryClient}>{ui}</QueryClientProvider>,
   );
@@ -50,7 +41,7 @@ export const renderWithClient = (ui: React.ReactElement) => {
 };
 
 export const createWrapper = () => {
-  const testQueryClient = createTestQueryClient();
+  const testQueryClient = queryClient();
   return ({ children }) => (
     <QueryClientProvider client={testQueryClient}>
       {children}
