@@ -7,8 +7,10 @@
 - 🪢 [CSS Modules](https://github.com/css-modules/css-modules)
 - 👑 [Atomic Design organization](https://bradfrost.com/blog/post/atomic-web-design/)
 - 🗂 [Absolute imports](https://github.com/vitejs/vite/issues/88#issuecomment-762415200)
-- 🐶 [Husky] - Improve code quality with linting and code formatting
+- 🐶 [Husky](https://github.com/typicode/husky) - Improve code quality with linting and code formatting
 - ☁️ Deploy on Vercel, zero-config
+- 💻 [Vite](https://vite.io/) - Vue-powered static site generator
+- 📚 [Pnpm](https://pnpm.js.org/) - Package manager for Node.js
 
 ### Coding Style
 
