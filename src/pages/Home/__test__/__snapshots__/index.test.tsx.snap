@@ -2,8 +2,8 @@
 
 exports[`Home Screen Render Home screen 1`] = `
 <div>
-  <div>
-    Home
-  </div>
+  <p>
+    Fetching your data..
+  </p>
 </div>
 `;

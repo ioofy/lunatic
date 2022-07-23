@@ -1,16 +1,20 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import { render } from "@testing-library/react";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { Home } from "../index.page";
+
+const HomeComponents = () => {
+  const queryClient = new QueryClient();
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Home />
+    </QueryClientProvider>
+  );
+};
 
 describe("Home Screen", () => {
   it("Render Home screen", () => {
-    const { container } = render(<Home />);
+    const { container } = render(<HomeComponents />);
     expect(container).toMatchSnapshot();
-  });
-
-  it("check if Home screen renders", async () => {
-    render(<Home />);
-
-    await waitFor(() => screen.getByText("Home"));
-    expect(screen.getByText("Home").innerHTML).toBe("Home");
   });
 });
