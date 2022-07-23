@@ -10,7 +10,8 @@
 - 🐶 [Husky](https://github.com/typicode/husky) - Improve code quality with linting and code formatting
 - ☁️ Deploy on Vercel, zero-config
 - 💻 [Vite](https://vite.io/) - Vue-powered static site generator
-- 📚 [Pnpm](https://pnpm.js.org/) - Package manager for Node.js
+- 📦 [Pnpm](https://pnpm.js.org/) - Package manager for Node.js
+- 🧳 Pull Request with Github Actions before Merge
 
 ### Coding Style
 
