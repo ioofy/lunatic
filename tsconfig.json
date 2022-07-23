@@ -24,7 +24,9 @@
       "styles/*": ["src/styles/*"],
       "pages/*": ["src/pages/*"],
       "routes/*": ["src/routes/*"],
-      "services/*": ["src/services/*"]
+      "services/*": ["src/services/*"],
+      "libs/*": ["src/libs/*"],
+      "types/*": ["src/types/*"]
     }
   },
   "include": ["./src"]
