@@ -1,16 +1,16 @@
 ## Features
 
 - ⚡️ [React 18](https://beta.reactjs.org/)
-- 🦾 TypeScript, of course
-- 🫀 [Jest](https://jestjs.io/) - unitary testing made easy
+- 🫀 [Jest](https://jestjs.io/) - unitary testing made easy and with mocks
 - 🎨 [Tailwind with JIT](https://tailwindcss.com/) - next generation utility-first CSS
 - 🪢 [CSS Modules](https://github.com/css-modules/css-modules)
 - 👑 [Atomic Design organization](https://bradfrost.com/blog/post/atomic-web-design/)
 - 🗂 [Absolute imports](https://github.com/vitejs/vite/issues/88#issuecomment-762415200)
 - 🐶 [Husky](https://github.com/typicode/husky) - Improve code quality with linting and code formatting
-- ☁️ Deploy on Vercel, zero-config
-- 💻 [Vite](https://vite.io/) - Vue-powered static site generator
+- 💻 [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
 - 📦 [Pnpm](https://pnpm.js.org/) - Package manager for Node.js
+- 🦾 TypeScript, of course
+- ☁️ Deploy on Vercel, zero-config
 - 🧳 Pull Request with Github Actions before Merge
 
 ### Coding Style

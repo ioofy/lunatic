@@ -1,10 +1,9 @@
 import apiClient from "libs/apiClient";
-import { UsersType } from "types/data";
+import { Users } from "types/data";
 
 const getUsersData = async (no: number) => {
-  const response = await apiClient.get(`/users/${no}`);
-
-  return UsersType.parse(response.data);
+  const response = await apiClient.get<Users>(`/users/${no}`);
+  return response.data;
 };
 
 const userService = { getUsersData };
