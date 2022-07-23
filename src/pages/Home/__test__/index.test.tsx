@@ -1,16 +1,16 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import App from "./App";
+import { Home } from "../index.page";
 
 describe("Home Screen", () => {
   it("Render Home screen", () => {
-    const { container } = render(<App />);
+    const { container } = render(<Home />);
     expect(container).toMatchSnapshot();
   });
 
   it("check if Home screen renders", async () => {
-    render(<App />);
+    render(<Home />);
 
-    await waitFor(() => screen.getByText("App"));
-    expect(screen.getByText("App").innerHTML).toBe("App");
+    await waitFor(() => screen.getByText("Home"));
+    expect(screen.getByText("Home").innerHTML).toBe("Home");
   });
 });

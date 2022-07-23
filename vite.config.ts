@@ -1,12 +1,13 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import react from "@vitejs/plugin-react";
+import EnvironmentPlugin from "vite-plugin-environment";
 
 export default defineConfig((configEnv) => {
   const isDevelopment = configEnv.mode === "development";
 
   return {
-    plugins: [react()],
+    plugins: [react(), EnvironmentPlugin(["API_KEY"])],
     resolve: {
       alias: {
         app: resolve(__dirname, "src", "app"),
